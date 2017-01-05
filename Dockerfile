@@ -19,3 +19,4 @@ COPY scripts/*.sh /opt/scripts
 RUN mkdir -p /opt && cd /opt &&  wget -q -O - ${GCLOUD_SDK_URL} | tar zxf - \
     && /bin/bash /opt/scripts/setup.sh /opt/google-cloud-sdk
 
+RUN rm -rf /opt/google-cloud-sdk/.install/.backup

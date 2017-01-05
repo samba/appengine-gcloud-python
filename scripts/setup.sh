@@ -9,8 +9,6 @@ CLOUDSDK_CORE_DISABLE_PROMPTS=1 ${CLOUD_SDK}/install.sh \
     --path-update=true \
     --command-completion true
 
-source ${HOME}/.bashrc
-
 # Common components for application development
 echo Y | ${CLOUD_SDK_BIN}/gcloud components install \
     app-engine-python \
