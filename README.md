@@ -40,7 +40,7 @@ env_secure.sh clean
 
 
 # To generate the encoded form:
-echo "${sensitive_data}" | env_secure.sh encode "${PASSWOR}"
+echo "${sensitive_data}" | env_secure.sh encode "${PASSWORD}"
 
 ```
 

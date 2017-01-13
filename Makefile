@@ -1,7 +1,14 @@
 
+PROJECT=sbriesemeister/appengine-gcloud-python
+
 all: build
 
 
 build:
-	docker build -t sbriesemeister/appengine-gcloud-python:test .
+	docker build -t ${PROJECT}:test .
+
+
+push-latest:
+	docker build -t ${PROJECT}:latest .
+	docker push ${PROJECT}:latest
 

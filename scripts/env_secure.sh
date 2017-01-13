@@ -35,6 +35,6 @@ case "$1" in
     ;;
   clean)
     test -f ${STASH}/index && cat ${STASH}/index | xargs -d '\n' rm -v 
-    test -f ${STAHS}/index && rm -v ${STASH}/index
+    test -f ${STASH}/index && rm -v ${STASH}/index
     ;;
 esac
