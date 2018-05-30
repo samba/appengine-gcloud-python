@@ -1,7 +1,7 @@
 FROM alpine:latest as clean
 
 ARG GCLOUD_SDK_VERSION
-ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-139.0.0}
+ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-202.0.0}
 ENV PATH /opt/google-cloud-sdk/bin:/usr/local/bin:$PATH
 
 COPY scripts/*.sh /opt/

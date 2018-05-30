@@ -24,7 +24,7 @@ gcloud_components () {
   # echo gsutil
   # echo docker-credential-gcr
   echo app-engine-python
-  echo cloud-datastore-emulator
+  # echo cloud-datastore-emulator
 }
 
 
