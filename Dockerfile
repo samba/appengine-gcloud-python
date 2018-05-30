@@ -14,5 +14,3 @@ RUN sh /opt/setup_alpine.sh
 RUN sh /opt/setup_appengine.sh /opt/google-cloud-sdk
 
 
-RUN rm -rf /opt/google-cloud-sdk/.install/.backup
-
