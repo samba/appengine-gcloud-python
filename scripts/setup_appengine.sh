@@ -30,3 +30,6 @@ gcloud_components () {
 
 # Install the desired components 
 echo Y | ${CLOUD_SDK_BIN}/gcloud components install $(gcloud_components) 
+
+
+rm -rf /opt/google-cloud-sdk/.install/.backup
