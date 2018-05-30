@@ -5,7 +5,7 @@ all: build
 
 
 build:
-	docker build -t ${PROJECT}:test .
+	docker build --target clean -t ${PROJECT}:test .
 
 
 push-latest:
