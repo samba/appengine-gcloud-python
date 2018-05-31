@@ -5,7 +5,7 @@ set -x
 
 DEV_PACKAGES="libffi-dev libjpeg-turbo-dev libressl-dev python2-dev musl-dev zlib-dev"
 BUILD_PACKAGES="gcc build-base"
-PYTHON_ALPINE="py2-cffi py2-openssl py2-pip python2"
+PYTHON_ALPINE="py2-cffi py2-openssl py2-pip py2-cryptography python2"
 
 apk --no-cache add ${DEV_PACKAGES} ${BUILD_PACKAGES} ${PYTHON_ALPINE} zlib wget libressl 
 
