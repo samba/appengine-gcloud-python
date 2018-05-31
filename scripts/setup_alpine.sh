@@ -11,5 +11,7 @@ apk --no-cache add ${DEV_PACKAGES} ${BUILD_PACKAGES}  python2 py2-pip zlib make 
 pip install -q unittest2 pytest nose flake8 virtualenv
 pip install -q Pillow 
 
-apk del -r ${DEV_PACKAGES} ${BUILD_PACKAGES} 
+# NB: applications of this container must install more Python packages, which can require
+# compiled modules, i.e. requiring gcc and friends to be present in the container.
+# apk del -r ${DEV_PACKAGES} ${BUILD_PACKAGES} 
 
