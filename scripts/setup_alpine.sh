@@ -9,6 +9,9 @@ PYTHON_ALPINE="py2-cffi py2-openssl py2-pip py2-cryptography python2"
 
 apk --no-cache add ${DEV_PACKAGES} ${BUILD_PACKAGES} ${PYTHON_ALPINE} zlib wget libressl 
 
+# Upgrade pip first.
+pip install --upgrade pip
+
 # Python dependencies
 pip install -q unittest2 pytest nose flake8 virtualenv
 pip install -q Pillow
