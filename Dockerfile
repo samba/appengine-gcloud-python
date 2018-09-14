@@ -1,4 +1,4 @@
-FROM alpine:latest as clean
+FROM alpine:3.8 as clean
 
 ARG GCLOUD_SDK_VERSION
 ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-216.0.0}
