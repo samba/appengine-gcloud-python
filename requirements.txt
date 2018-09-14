@@ -1,0 +1,19 @@
+# Packages for Python to install via pip.
+## Code quality and testing tools
+unittest2 
+pytest 
+nose 
+flake8 
+
+## Development environment and other sandboxing.
+virtualenv
+
+## Essential kit for my usual workflow on AppEngine
+Pillow
+urllib3[secure]
+
+
+## Additional utilities for building apps on AppEngine
+# scss  # deprecated
+pyScss
+

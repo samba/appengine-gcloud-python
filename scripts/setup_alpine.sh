@@ -13,9 +13,8 @@ apk --no-cache add ${DEV_PACKAGES} ${BUILD_PACKAGES} ${PYTHON_ALPINE} zlib wget 
 pip install --upgrade pip
 
 # Python dependencies
-pip install -q unittest2 pytest nose flake8 virtualenv
-pip install -q Pillow
-pip install -q 'urllib3[secure]'
+pip install -r $(dirname $0)/requirements.txt
+
 
 # NB: applications of this container must install more Python packages, which can require
 # compiled modules, i.e. requiring gcc and friends to be present in the container.
