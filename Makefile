@@ -1,13 +1,15 @@
 
 PROJECT=sbriesemeister/appengine-gcloud-python
-LABEL=$(shell head -n 1 ./imagelabel.txt)
+IMAGE_TARGET:=main
+LABEL:=$(shell head -n 1 ./imagelabel.txt)
 DEPS:=$(shell find ./ -type f -name '*.sh' -o -name '*.txt')
 
 all: build
 
 
 build: $(DEPS)
-	docker build --pull --target clean -t $(PROJECT):test .
+	docker build --pull --target $(IMAGE_TARGET) -t $(PROJECT):test .
+	docker images $(PROJECT):test
 
 
 push-latest:
