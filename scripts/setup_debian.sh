@@ -24,3 +24,5 @@ pip install --upgrade pip
 pip install -r $(dirname $0)/requirements.txt
 
 
+apt-get autoremove
+apt-get clean autoclean
