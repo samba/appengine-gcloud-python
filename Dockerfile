@@ -1,4 +1,4 @@
-FROM python:3.8 as clean
+FROM python:3.8-slim as main 
 
 ARG GCLOUD_SDK_VERSION
 ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-280.0.0}
