@@ -1,7 +1,7 @@
 FROM python:3.8-slim as main 
 
 ARG GCLOUD_SDK_VERSION
-ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-280.0.0}
+ENV GCLOUD_SDK_VERSION=${GCLOUD_SDK_VERSION:-281.0.0}
 ENV PATH /opt/google-cloud-sdk/bin:/usr/local/bin:$PATH
 
 COPY scripts/*.sh /opt/
