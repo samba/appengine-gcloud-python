@@ -10,9 +10,10 @@ all: build
 build: $(DEPS)
 	docker build --pull --target $(IMAGE_TARGET) -t $(PROJECT):test .
 	docker images $(PROJECT):test
+	docker history $(PROJECT):test
 
 
-push-latest:
+push:
 	docker build -t $(PROJECT):$(LABEL) .
 	docker push $(PROJECT):$(LABEL)
 
