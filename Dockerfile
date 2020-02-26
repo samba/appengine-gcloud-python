@@ -10,7 +10,7 @@ COPY packages.txt /opt/
 RUN ln -s /opt/env_secure.sh /usr/local/bin/ && chmod +x /opt/env_secure.sh
 
 # Dependencies for Google AppEngine Python
-RUN bash /opt/setup_debian.sh /opt/packages.txt
+RUN bash /opt/setup_debian.sh /opt/packages.txt /opt/requirements.txt
 
 # Install Google Cloud SDK
 RUN bash /opt/setup_appengine.sh /opt/google-cloud-sdk

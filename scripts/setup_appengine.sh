@@ -15,7 +15,8 @@ wget -q -O - ${GCLOUD_SDK_URL} | tar -zxf -
 CLOUDSDK_CORE_DISABLE_PROMPTS=1 ${CLOUD_SDK}/install.sh \
     --usage-reporting=false \
     --path-update=true \
-    --command-completion true
+    --command-completion true \
+    --quiet
 
 # A handy shortcut for selectively enabling them :)
 gcloud_components () {
@@ -25,12 +26,16 @@ gcloud_components () {
   # echo docker-credential-gcr
   echo app-engine-python
   # echo app-engine-python-extras
-  # echo cloud-datastore-emulator
+  echo cloud-datastore-emulator  # NB: requires java
+  echo beta
 }
 
 
+
+
+
 # Install the desired components 
-echo Y | ${CLOUD_SDK_BIN}/gcloud components install $(gcloud_components) 
+echo Y | ${CLOUD_SDK_BIN}/gcloud components install $(gcloud_components) --quiet 
 
 rm -rf ${CLOUD_SDK_URL}
 rm -rf /opt/google-cloud-sdk/.install/.backup

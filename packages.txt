@@ -4,4 +4,4 @@ python3-cryptography
 python3-openssl
 make
 wget
-
+default-jre-headless
